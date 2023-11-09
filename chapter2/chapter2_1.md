@@ -3,22 +3,22 @@
 ## 01. 네이밍 컨벤션, 이유를 알고 쓰자
 
 ### 좋은 이름이란 무엇인가?
-- 다른 개발자가 봤을 때 한 번에 무슨 뜻인지, 무슨 기능을 하는지 알아낼 수 있는 이름이다. \
+- 다른 개발자가 봤을 때 한 번에 무슨 뜻인지, 무슨 기능을 하는지 알아낼 수 있는 이름이다.
 
 ### 이름 짓기는 창조가 아니라 조합이다.
-- 기존의 네이밍 컨벤션을 활용하면 고민할 것이 줄어든다. \
+- 기존의 네이밍 컨벤션을 활용하면 고민할 것이 줄어든다.
 
 ### 가독성과 소통이 먼저다.
-- 소통의 원활함을 위해 사전에 합의를 해두는 것이 좋다. \
+- 소통의 원활함을 위해 사전에 합의를 해두는 것이 좋다.
 
 ### 각 언어의 네이밍 컨벤션
-[Swift 공식 컨벤션](https://www.swift.org/documentation/api-design-guidelines/) \
-[TypeScript 구글 컨벤션](https://google.github.io/styleguide/tsguide.html) \
+- [Swift 공식 컨벤션](https://www.swift.org/documentation/api-design-guidelines/)
+- [TypeScript 구글 컨벤션](https://google.github.io/styleguide/tsguide.html)
 
 ### 네이밍에 간접적으로 도움을 주는 컨벤션들
-[Apple 휴먼 인터페이스 가이드](https://developer.apple.com/design/human-interface-guidelines) \
-[Apple 개발자 컨퍼런스](https://developer.apple.com/videos/swift) \
-[클린 코드](https://www.yes24.com/Product/Goods/11681152) \
+- [Apple 휴먼 인터페이스 가이드](https://developer.apple.com/design/human-interface-guidelines)
+- [Apple 개발자 컨퍼런스](https://developer.apple.com/videos/swift)
+- [클린 코드](https://www.yes24.com/Product/Goods/11681152)
 
 ---
 
@@ -26,12 +26,12 @@
 
 ### i는 변수 이름이지만 d는 아니다.
 - i, j, k는 iteration, x, y, z는 coordinate 등으로 흔히 쓰이는 변수명이다. (물론 해당 맥락에서 쓰였을 때)
-- 그러나 t, s, d 등의 변수명은 다소 논란의 여지가 있을 수 있다. (생각해보면 모든 변수명은 논란의 여지가 있다.) \
+- 그러나 t, s, d 등의 변수명은 다소 논란의 여지가 있을 수 있다. (생각해보면 모든 변수명은 논란의 여지가 있다.)
 
 ### 약어를 쓰는 것이 좋을까? 안 쓰는 것이 좋을까?
 - 용어 정의서에 설명 하나 추가하면 개발 과정이 편해질 수 있다.
 - 서비스 이름이나 패키지 이름 등에 쓰는 것은 나쁘지 않다. (AWS, FIR, 등)
-- 너무 흔히 쓰이는 약어도 괜찮다. (HTTP, XML, UI, 등) \
+- 너무 흔히 쓰이는 약어도 괜찮다. (HTTP, XML, UI, 등)
  
 ### 함수 이름 짓는 순서
 ``` yaml
