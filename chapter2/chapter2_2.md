@@ -106,6 +106,7 @@ if (employee.isEligibleForFullBenefits())
 <br>
 
 ### 좋은 주석
+<br>
 
 #### 1. 법적인 주석
 ``` java
@@ -180,7 +181,7 @@ String listItemContent = match.group(3).trim()
 ``` java
 @Deprecated(since = "1.3")
 ```
-![사진](https://github.com/AlmSmartDoctor/study-2023-10-writing-and-developer/assets/80523328/2652e9f1-baea-47e3-9e06-c120128171ab)
+![사진](https://github.com/AlmSmartDoctor/study-2023-10-writing-and-developer/assets/80523328/2652e9f1-baea-47e3-9e06-c120128171ab) \
 이런 식으로 since에 언제부터 사라지는 건지에 대한 시점을 적어줄 수 있다.
 
 이외에도 아래와 같은 것들이 있다.
@@ -193,6 +194,7 @@ String listItemContent = match.group(3).trim()
 
 ### 나쁜 주석
 작성된 주석 대부분이 나쁜 주석에 포함된다.
+<br>
 
 #### 1. 주절거리는 주석
 개발자 자신만 알아듣게 주절거리는 식으로 써놓은 주석
@@ -280,7 +282,7 @@ if (employee.isEligibleForFullBenefits())
 <br>
 
 #### 8. 주석으로 처리한 코드
-이제는 쓸모없어진? 아니면 잠깐만 주석처리를 해논?
+이제는 쓸모없어진? 아니면 잠깐만 주석처리를 해놓은? \
 도대체 무슨 의미로 주석처리해놨는지 알 수가 없는 코드는 괜한 오해만 생기게 만든다.
 ``` java
 return getMember();
@@ -289,7 +291,7 @@ return getMember();
 ```
 <br>
 
-책엔 더 많은 예제들이 있는데 솔직히 이렇게까지 불필요한 주석을 다는 사람들이 있을까 싶어서 그나마 좀 있을법한 주석 예제들을 넣었습니다.
-사실 이번 장에서 하려는 얘기는 단 하나입니다.
-부정확하고 코드로 나타낼 수 있는 주석은 필요없다.
+책엔 더 많은 예제들이 있는데 솔직히 이렇게까지 불필요한 주석을 다는 사람들이 있을까 싶어서 그나마 좀 있을법한 주석 예제들을 넣었습니다. \
+사실 이번 장에서 하려는 얘기는 단 하나입니다. \
+부정확하고 코드로 나타낼 수 있는 주석은 필요없다. \
 정말 필요할 때만 주석을 넣자 정말정말 필요할 때.
