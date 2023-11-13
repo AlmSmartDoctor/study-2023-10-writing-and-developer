@@ -131,14 +131,14 @@ assertTrue(a.compareTo(b) == -1); // a < b
 assertTrue(a.compareTo(b) == 1); // a > b
 ```
 
-4. 결과를 경고하는 주석
+#### 4. 결과를 경고하는 주석
 실행 결과를 미리 경고 하는 주석은 괜찮은 주석이다.
 ``` java
 // 평균 10분 정도 걸리는 작업입니다.
 public void calcBalance()...
 ```
 
-5. Todo, Fixme 주석
+#### 5. Todo, Fixme 주석
 IDE에서 인식할 수 있는 주석을 사용하는 것도 괜찮은 방법이다.
 ``` java
 // Todo : 해야 할 일
@@ -153,27 +153,29 @@ private Order getOrder()...
 private Student getStudent()...
 ``` 
 
-6. 중요성을 강조하는 주석
+#### 6. 중요성을 강조하는 주석
 자칫 대수롭지 않다고 여겨서 지우거나 수정하면 절대 안 되는 부분에 강조를 위한 주석을 사용한다.
 ``` java
 // 여기서 trim은 반드시 필요하다. 공백으로 시작하는 문자열이 가끔 들어오기 때문이다.
 String listItemContent = match.group(3).trim()
 ```
 
-7. Javadocs
+#### 7. Javadocs
 공개 API나 회사 내에서 공통으로 쓰고 있는 모듈에 달아 놓으면 좋다.
+![사진](https://github.com/AlmSmartDoctor/study-2023-10-writing-and-developer/assets/80523328/9d29f665-6b80-4457-9ba8-2b3e709b8d9d)
 위 처럼 javadocs를 달아놓으면 IDE가 아주 깔끔하게 잘 보여준다.
 
-8. 주석같은 annotation
+#### 8. 주석같은 annotation
 함수, 변수가 변경되어서 삭제된다는 걸 주석으로도 남길 수 있지만 주석보단 annotation이 더 눈에 띄고 좋다.
 @Deprecated : 어느 시점이후로 사라지게 될 부분이다라는 뜻의 어노테이션
 아래처럼 Javadocs에 언제부터 없어질지를 적어도 되는데
 ``` java
 @Deprecated(since = "1.3")
 ```
-  이런 식으로 since에 언제부터 사라지는 건지에 대한 시점을 적어줄 수 있다.
+[사진](https://github.com/AlmSmartDoctor/study-2023-10-writing-and-developer/assets/80523328/2652e9f1-baea-47e3-9e06-c120128171ab)
+이런 식으로 since에 언제부터 사라지는 건지에 대한 시점을 적어줄 수 있다.
 
-  이외에도 아래와 같은 것들이 있다.
+이외에도 아래와 같은 것들이 있다.
 ``` java
 @NotThreadSafe : 쓰레드 세이프하지 않다.
 @Nullable : Null이 허용된다
@@ -194,11 +196,12 @@ public void loadProperties() {
     }
 }
 ```
-  catch에 어떤 작업을 하려고 주석을 달아 놓은 것인가? 아니면 나중에 작업을 하려고 써놓은 주석인가?
-  확실하지 않기 때문에 로직을 까볼 수 밖에 없다.
-  이해가 되지 않고 개발자 자신만 아는 말로 써놓는 건 최악이다.
+catch에 어떤 작업을 하려고 주석을 달아 놓은 것인가? 아니면 나중에 작업을 하려고 써놓은 주석인가?
+확실하지 않기 때문에 로직을 까볼 수 밖에 없다.
+이해가 되지 않고 개발자 자신만 아는 말로 써놓는 건 최악이다.
+<br>
 
-### 2. 코드와 동일한 내용을 써놓은 주석
+#### 2. 코드와 동일한 내용을 써놓은 주석
 헤더에 달린 주석이 아래 코드 내용과 동일하다. 주석 읽을 시간에 코드 읽는 게 더 빠르다.
 ``` java
 // this.closed가 true일 때 반환되는 유틸
@@ -210,10 +213,12 @@ public synchronized void waitForClose(final long millis) throws Exception {
     }
 }
 ```
+<br>
 
-#### 3. 애매한 정보가 있는 주석
+##### 3. 애매한 정보가 있는 주석
 딱히 예를 들필요가 없다.
 주석이 달린 로직을 상세히 적지 않고 오해할만하게 일부만 적은 그런 쓸모없는 주석
+<br>
 
 #### 4. 의무적으로 다는 주석
 모든 메소드의 인자를 그냥 아무 의미없이 의무적으로 다는 주석은 별로다.
@@ -230,7 +235,8 @@ public void addCD(String title, String author) {
     cds.add(cd);
 }
 ```
-  만약 회사 내부 방침으로 저렇게 다 적어야 한다면 회사 방침을 다시 고려해볼 필요가 있다.
+만약 회사 내부 방침으로 저렇게 다 적어야 한다면 회사 방침을 다시 고려해볼 필요가 있다.
+<br>
 
 #### 5. 이력을 기록하는 주석
 소스에 주석으로 이력을 관리하는 주석은 별로다.
@@ -243,6 +249,7 @@ git이 다 해주기 때문에 불필요하다.
  * 2021년 12월 20일 : 클래스 명을 Member -> Customer로 변경
  */
 ```
+<br>
 
 #### 6. 있으나 마나 한 주석
 저런 쓸모없는 주석을 다는 사람이 있나?
@@ -250,6 +257,7 @@ git이 다 해주기 때문에 불필요하다.
 // 기본 생성자
 protected Member() {}
 ```
+<br>
 
 #### 7. 함수나 변수로 표현할 수 있다면 주석을 달지 마라
 ``` java
@@ -260,6 +268,7 @@ if ((employee.flags & HOURLY_FLAG) && (employee.age > 65))
 ``` java
 if (employee.isEligibleForFullBenefits())
 ```
+<br>
 
 #### 8. 주석으로 처리한 코드
 이제는 쓸모없어진? 아니면 잠깐만 주석처리를 해논?
@@ -269,6 +278,7 @@ return getMember();
 // updateMember();
 // return member;
 ```
+<br>
 
 책엔 더 많은 예제들이 있는데 솔직히 이렇게까지 불필요한 주석을 다는 사람들이 있을까 싶어서 그나마 좀 있을법한 주석 예제들을 넣었습니다.
 사실 이번 장에서 하려는 얘기는 단 하나입니다.
