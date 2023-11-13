@@ -89,8 +89,8 @@ Welcome Korea   -> Hello World
 
 ## 04, 05 주석을 잘 쓰는 법에 관하여 (클린 코드 4장) [참고 링크](https://effortguy.tistory.com/187)
 
-코드로 의도를 표현하라!
-대부분 주석을 보면 코드로 설명이 다 안 되니까 이해시키려고 달아논 코드입니다.
+코드로 의도를 표현하라! \
+대부분 주석을 보면 코드로 설명이 다 안 되니까 이해시키려고 달아논 코드입니다. \
 그러지 말고 코드에 개발자의 의도를 표현하는 방법을 사용하자.
 
 ``` yaml
@@ -103,6 +103,7 @@ if 조건이 아주 길고 어렵기 때문에 위에 주석을 달아논 것을
 if (employee.isEligibleForFullBenefits())
 ```
 주석을 제거하고 위처럼 의도가 나타나게 코드를 변경하니 주석이 없이도 술술 읽힌다.
+<br>
 
 ### 좋은 주석
 
@@ -111,18 +112,20 @@ if (employee.isEligibleForFullBenefits())
 // Copyright (c) 2019, 2020, 2021 by Effort Guy, All rights reserved.
 // GNU General Public License 버전 2 이상을 따르는 조건으로 배포한다.
 ```
-  코드 배포 license를 명시할 때 사용하는 주석은 소유권 정보로 주석으로 타당하다.
+코드 배포 license를 명시할 때 사용하는 주석은 소유권 정보로 주석으로 타당하다.
+<br>
 
 #### 2. 정보를 제공하는 주석
 ``` java
 // kk:mm:ss EEE, MMM dd, yyyy 형식이다.
 Pattern timeMatcher = Pattern.compile("\\d*:\\d*:\\d* \\w*, \\w* \\d*, \\d*");
 ```
-  위 주석은 사실 주석이 없어도 이해할 수는 있지만 바로 이해하기 힘들기 때문에 괜찮은 주석이다.
-  물론 위처럼 안 하고 메소드로 따로 빼서 의도를 표현한 이름을 사용하면 주석이 필요없을 거 같다.
+위 주석은 사실 주석이 없어도 이해할 수는 있지만 바로 이해하기 힘들기 때문에 괜찮은 주석이다. \
+물론 위처럼 안 하고 메소드로 따로 빼서 의도를 표현한 이름을 사용하면 주석이 필요없을 거 같다.
+<br>
 
 #### 3. 의미를 명료하게 밝히는 주석
-표준 라이브러리나 변경하지 못하는 코드에 속하는 모호한 인수나 반환값의 의미를 명료하게 밝히는 주석은 괜찮은 주석이다.
+표준 라이브러리나 변경하지 못하는 코드에 속하는 모호한 인수나 반환값의 의미를 명료하게 밝히는 주석은 괜찮은 주석이다. \
 변경할 수 있으면 명확한 이름을 쓰면 된다.
 ``` java
 assertTrue(a.compareTo(a) == 0); // a == a
@@ -130,6 +133,7 @@ assertTrue(a.compareTo(b) != 0); // a != b
 assertTrue(a.compareTo(b) == -1); // a < b
 assertTrue(a.compareTo(b) == 1); // a > b
 ```
+<br>
 
 #### 4. 결과를 경고하는 주석
 실행 결과를 미리 경고 하는 주석은 괜찮은 주석이다.
@@ -137,6 +141,7 @@ assertTrue(a.compareTo(b) == 1); // a > b
 // 평균 10분 정도 걸리는 작업입니다.
 public void calcBalance()...
 ```
+<br>
 
 #### 5. Todo, Fixme 주석
 IDE에서 인식할 수 있는 주석을 사용하는 것도 괜찮은 방법이다.
@@ -144,14 +149,15 @@ IDE에서 인식할 수 있는 주석을 사용하는 것도 괜찮은 방법이
 // Todo : 해야 할 일
 // Fixme : 수정 할 작업
 ```
-  Todo, Fixme 주석을 달아 놓으면 IDE에서 해당 주석만 몰아서 볼 수 있다.
+Todo, Fixme 주석을 달아 놓으면 IDE에서 해당 주석만 몰아서 볼 수 있다.
 ``` java
 // Todo 로그를 추가해야 함
 private Order getOrder()...
 
 // Fixme 간헐적으로 디코딩 에러가 발생함
 private Student getStudent()...
-``` 
+```
+<br>
 
 #### 6. 중요성을 강조하는 주석
 자칫 대수롭지 않다고 여겨서 지우거나 수정하면 절대 안 되는 부분에 강조를 위한 주석을 사용한다.
@@ -159,20 +165,22 @@ private Student getStudent()...
 // 여기서 trim은 반드시 필요하다. 공백으로 시작하는 문자열이 가끔 들어오기 때문이다.
 String listItemContent = match.group(3).trim()
 ```
+<br>
 
 #### 7. Javadocs
 공개 API나 회사 내에서 공통으로 쓰고 있는 모듈에 달아 놓으면 좋다.
-![사진](https://github.com/AlmSmartDoctor/study-2023-10-writing-and-developer/assets/80523328/9d29f665-6b80-4457-9ba8-2b3e709b8d9d)
+![사진](https://github.com/AlmSmartDoctor/study-2023-10-writing-and-developer/assets/80523328/9d29f665-6b80-4457-9ba8-2b3e709b8d9d) \
 위 처럼 javadocs를 달아놓으면 IDE가 아주 깔끔하게 잘 보여준다.
+<br>
 
 #### 8. 주석같은 annotation
-함수, 변수가 변경되어서 삭제된다는 걸 주석으로도 남길 수 있지만 주석보단 annotation이 더 눈에 띄고 좋다.
-@Deprecated : 어느 시점이후로 사라지게 될 부분이다라는 뜻의 어노테이션
+함수, 변수가 변경되어서 삭제된다는 걸 주석으로도 남길 수 있지만 주석보단 annotation이 더 눈에 띄고 좋다. \
+@Deprecated : 어느 시점이후로 사라지게 될 부분이다라는 뜻의 어노테이션 \
 아래처럼 Javadocs에 언제부터 없어질지를 적어도 되는데
 ``` java
 @Deprecated(since = "1.3")
 ```
-[사진](https://github.com/AlmSmartDoctor/study-2023-10-writing-and-developer/assets/80523328/2652e9f1-baea-47e3-9e06-c120128171ab)
+![사진](https://github.com/AlmSmartDoctor/study-2023-10-writing-and-developer/assets/80523328/2652e9f1-baea-47e3-9e06-c120128171ab)
 이런 식으로 since에 언제부터 사라지는 건지에 대한 시점을 적어줄 수 있다.
 
 이외에도 아래와 같은 것들이 있다.
@@ -181,6 +189,7 @@ String listItemContent = match.group(3).trim()
 @Nullable : Null이 허용된다
 @NonNull : Null이 허용되지 않는다.
 ```
+<br>
 
 ### 나쁜 주석
 작성된 주석 대부분이 나쁜 주석에 포함된다.
